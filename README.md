@@ -1,1 +1,3 @@
-# taller-concurrency-vs-parallelism
+# Concurrencia Vs Paralelismo
+
+TODO: Fill
