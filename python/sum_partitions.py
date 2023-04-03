@@ -15,6 +15,9 @@ def main():
     results = [0] * n_partitions
     threads = []
     current_partition = 0
+
+    print("Starting threads")
+
     for i in range(0, len(buffer), PARTITION_SIZE):
         low = i
         high = min((i + PARTITION_SIZE), len(buffer)) - 1
@@ -25,7 +28,7 @@ def main():
         t.start()
     for t in threads:
         t.join()
-    print(sum(results))
+    print("Result: ", sum(results))
     
 
 if __name__ == '__main__':
