@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <chrono>
 
-const std::size_t BUFFER_SIZE = 1ULL << 28;	// 2**28
+const std::size_t BUFFER_SIZE = 1ULL << 27;	// 2**27
 
 int main() {
     std::cout << "Allocating buffer of " << BUFFER_SIZE << " elements (" << sizeof(uint64_t) * ((float) BUFFER_SIZE / (float)(1ULL << 30)) << " GiB)\n";

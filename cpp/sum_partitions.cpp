@@ -7,8 +7,8 @@
 #include <chrono>
 #include <utility>
 
-const std::size_t BUFFER_SIZE = 1ULL << 28;	   // 2**28
-const std::size_t PARTITION_SIZE = 1ULL << 25; // n_threads = ceil(BUFFER_SIZE / PARTITION_SIZE)
+const std::size_t BUFFER_SIZE = 1ULL << 27;	   // 2**27
+const std::size_t PARTITION_SIZE = 1ULL << 24; // n_threads = ceil(BUFFER_SIZE / PARTITION_SIZE)
 
 void sum_partition(const std::vector<uint64_t> &buffer, std::size_t low, std::size_t high, std::vector<uint64_t> &results, std::size_t partition){
 	uint64_t sum = 0;
